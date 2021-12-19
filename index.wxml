@@ -1,0 +1,9 @@
+<view class="tooltip">
+    
+    <slot name="title">
+        tooltip
+    </slot>
+    <view class="tooltiptext">
+        <view><slot name="content"></slot></view>
+    </view>
+</view>

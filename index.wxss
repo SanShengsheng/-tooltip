@@ -1,0 +1,47 @@
+	/* Tooltip 容器 */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* 悬停元素上显示点线 */
+        /* border-bottom: 1px dotted #ffffff;  */
+    }
+     
+    
+    /* Tooltip 文本 */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        min-width: 120px;
+        background-color: #ffffff;
+        /* color:  rgba(221, 221, 221, 1); */
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        display: inline-block;
+        /* 定位 */
+        position: absolute;
+        z-index: 1;
+        border: 1px solid rgba(221, 221, 221, 1);
+    }
+     
+    /* 鼠标移动上去后显示提示框 */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;  /* 提示工具头部 */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #FFFFFF transparent;
+        border: 1px solid rgba(221, 221, 221, 1);
+    }
+    .tooltip .tooltiptext {
+        min-width: 120px;
+        top: 100%;
+        left: 50%; 
+        margin-left: -60px; /* 使用一半宽度 (120/2 = 60) 来居中提示工具 */
+    }
